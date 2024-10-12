@@ -1,0 +1,9 @@
+    "custom/wallchange": {
+        "format": "{}",
+        "rotate": ${r_deg},
+        "exec": "echo ; echo 󰆊 switch wallpaper",
+        "on-click": "bash ~/.config/hypr/hyprpaper_preload.sh",
+        "interval" : 86400, // once every day
+        "tooltip": true
+    },
+

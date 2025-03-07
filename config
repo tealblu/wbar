@@ -1,5 +1,5 @@
 {
-    "output": "DP-3",
+    "output": "DP-2",
     "layer": "top",
     "position": "top",
     "reload_style_on_change": true,
@@ -132,12 +132,11 @@
             "none": ""
         },
         "return-type": "json",
-        "exec-if": "which dunstctl",
-        "exec": "notifications.py",
-        "on-scroll-down": "sleep 0.1 && dunstctl history-pop",
-        "on-click": "dunstctl set-paused toggle",
-        "on-click-middle": "dunstctl history-clear",
-        "on-click-right": "dunstctl close-all",
+        "exec": "echo '{\"text\":\"'$(swaync-client -p)'\", \"icon\":\"notification\"}'",
+        "on-scroll-down": "sleep 0.1 && swaync-client history-pop",
+        "on-click": "swaync-client -t toggle",
+        "on-click-middle": "swaync-client history-clear",
+        "on-click-right": "swaync-client close-all",
         "interval": 1,
         "tooltip": true,
         "escape": true
